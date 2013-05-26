@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Eclipse RTE product" uid="eclipserte.product" version="0.0.1.qualifier" useFeatures="true" includeLaunchers="true">
+
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-consoleLog -console</programArgs>
+      <vmArgs>-Declipse.ignoreApp=true 
+-Dosgi.noShutdown=true 
+-Dosgi.console.enable.builtin=false  
+-Dosgi.console.ssh=2222 
+-Dosgi.console.ssh.useDefaultSecureStorage=true
+-Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook 
+-Daj.weaving.verbose=true 
+-Dorg.aspectj.weaver.showWeaveInfo=true 
+-Dorg.aspectj.osgi.verbose=true 
+-Xmx1024M</vmArgs>
+      <vmArgsLin>-Dorg.eclipse.equinox.console.jaas.file=./store
+-Djava.security.auth.login.config=./org.eclipse.equinox.console.authentication.config
+-Dlogback.configurationFile=./logback.xml</vmArgsLin>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts 
+-Dorg.eclipse.equinox.console.jaas.file=../../../store
+-Djava.security.auth.login.config=../../../org.eclipse.equinox.console.authentication.config
+-Dlogback.configurationFile=../../../logback.xml</vmArgsMac>
+      <vmArgsSol>-Dorg.eclipse.equinox.console.jaas.file=./store
+-Djava.security.auth.login.config=./org.eclipse.equinox.console.authentication.config
+-Dlogback.configurationFile=./logback.xml</vmArgsSol>
+      <vmArgsWin>-Dorg.eclipse.equinox.console.jaas.file=./store
+-Djava.security.auth.login.config=./org.eclipse.equinox.console.authentication.config
+-Dlogback.configurationFile=./logback.xml</vmArgsWin>
+   </launcherArgs>
+
+   <windowImages/>
+
+
+   <launcher>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+
+   <vm>
+      <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</linux>
+      <macos include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</macos>
+      <solaris include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</solaris>
+      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</windows>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="org.elyast.fiddle.eclipserte.feature" version="0.0.1.qualifier"/>
+      <feature id="org.eclipse.equinox.p2.core.feature"/>
+      <feature id="org.eclipse.equinox.core.feature"/>
+      <feature id="org.eclipse.equinox.weaving.sdk"/>
+      <feature id="org.eclipse.core.runtime.feature"/>
+      <feature id="org.eclipse.equinox.compendium.sdk"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.frameworkadmin.equinox" autoStart="true" startLevel="3" />
+      <plugin id="org.eclipse.equinox.p2.console" autoStart="true" startLevel="3" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator.manipulator" autoStart="true" startLevel="3" />
+   </configurations>
+
+</product>

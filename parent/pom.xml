@@ -49,7 +49,7 @@
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
 			<version>${scala.version}</version>
-		</dependency>								
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -119,6 +119,16 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<argLine>-Xmx1024m</argLine>
+					<useUIHarness>false</useUIHarness>
+					<useUIThread>false</useUIThread>
+				</configuration>
+			</plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
@@ -173,18 +183,18 @@
 					<configuration>
 						<scalaVersion>${scala.version}</scalaVersion>
 						<sendJavaToScalac>false</sendJavaToScalac>
-						<args> 
-	                		<arg>-P:continuations:enable</arg> 
-	              		</args>
+						<args>
+							<arg>-P:continuations:enable</arg>
+						</args>
 						<compilerPlugins>
-	                        <compilerPlugin>
-	                            <groupId>org.scala-lang.plugins</groupId>
-	                            <artifactId>continuations</artifactId>
-	                            <version>${scala.version}</version>
-	                        </compilerPlugin>
-	                    </compilerPlugins>              		 
+							<compilerPlugin>
+								<groupId>org.scala-lang.plugins</groupId>
+								<artifactId>continuations</artifactId>
+								<version>${scala.version}</version>
+							</compilerPlugin>
+						</compilerPlugins>
 					</configuration>
-				</plugin>											
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
