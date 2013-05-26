@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<site>   
+<site>
+   <feature url="features/org.elyast.fiddle.eclipserte.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.eclipserte.feature" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>
    <category-def name="modules" label="Modules"/>
 </site>

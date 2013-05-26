@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.elyast.fiddle.eclipserte.feature"
+      label="Eclipse RTE"
+      version="0.0.1.qualifier">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import feature="org.eclipse.core.runtime.feature" version="1.1.0.v20120521-2346-7H7NFHlBpeIm_Y1_WXrenz0P9ad9" match="equivalent"/>
+      <import feature="org.eclipse.equinox.compendium.sdk" version="3.8.0.v20120522-1841-7X7eGb7FPGjtJjv1kjS_NdG"/>
+      <import feature="org.eclipse.equinox.core.feature" version="1.1.0.v20120522-1841-7K7XFMTF7RZHQZI4_c8S-nnFB"/>
+      <import feature="org.eclipse.equinox.weaving.sdk" version="1.0.200.v20120522-1841-79-FKsEVVFNVFsVk7O6G6"/>
+      <import feature="org.eclipse.equinox.p2.core.feature" version="1.1.0.v20120524-0542-8297FncFWmE7h4Asx2cpqz-T38"/>
+      <import plugin="org.apache.felix.gogo.command"/>
+      <import plugin="org.apache.felix.gogo.command.source"/>
+      <import plugin="org.apache.felix.gogo.runtime"/>
+      <import plugin="org.apache.felix.gogo.runtime.source"/>
+      <import plugin="org.apache.felix.gogo.shell"/>
+      <import plugin="org.apache.felix.gogo.shell.source"/>
+      <import plugin="ch.qos.logback.classic"/>
+      <import plugin="ch.qos.logback.classic.source"/>
+      <import plugin="ch.qos.logback.core"/>
+      <import plugin="ch.qos.logback.core.source"/>
+      <import plugin="ch.qos.logback.slf4j.source"/>
+      <import plugin="org.slf4j.api"/>
+      <import plugin="org.slf4j.api.source"/>
+      <import plugin="org.slf4j.ext"/>
+      <import plugin="org.slf4j.ext.source"/>
+      <import plugin="org.slf4j.jcl"/>
+      <import plugin="org.slf4j.jcl.source"/>
+      <import plugin="org.slf4j.jul"/>
+      <import plugin="org.slf4j.jul.source"/>
+      <import plugin="org.slf4j.log4j"/>
+      <import plugin="org.slf4j.log4j.source"/>
+      <import plugin="org.aspectj.runtime"/>
+      <import plugin="org.aspectj.runtime.source"/>
+      <import plugin="org.aspectj.weaver"/>
+   </requires>
+
+</feature>
