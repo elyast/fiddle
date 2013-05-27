@@ -3,34 +3,21 @@
 
 <product name="Eclipse RTE product" uid="eclipserte.product" version="0.0.1.qualifier" useFeatures="true" includeLaunchers="true">
 
-
    <configIni use="default">
    </configIni>
 
    <launcherArgs>
-      <programArgs>-console</programArgs>
       <vmArgs>-Daj.weaving.verbose=true 
 -Dorg.aspectj.weaver.showWeaveInfo=true 
 -Dorg.aspectj.osgi.verbose=true
+-Dlogback.configurationFile=${eclipse.home.location}/configuration/logback.xml
+-Dssh.server.keystore=${eclipse.home.location}/configuration/hostkey.ser
+-Dssh.server.authorized_keys=${eclipse.home.location}/configuration/authorized_keys
+-Djava.security.auth.login.config=${eclipse.home.location}/configuration/org.eclipse.equinox.console.authentication.config
+-Dorg.eclipse.equinox.console.jaas.file=${eclipse.home.location}/configuration/store
 -Xmx1024M</vmArgs>
-      <vmArgsLin>-Dorg.eclipse.equinox.console.jaas.file=./configuration/store
--Djava.security.auth.login.config=./configuration/org.eclipse.equinox.console.authentication.config
--Dlogback.configurationFile=./configuration/logback.xml
--Dssh.server.keystore=./configuration/hostkey.ser</vmArgsLin>
       <vmArgsMac>-XstartOnFirstThread 
--Dorg.eclipse.swt.internal.carbon.smallFonts 
--Dorg.eclipse.equinox.console.jaas.file=../../../configuration/store
--Djava.security.auth.login.config=../../../configuration/org.eclipse.equinox.console.authentication.config
--Dlogback.configurationFile=../../../configuration/logback.xml
--Dssh.server.keystore=../../../configuration/hostkey.ser</vmArgsMac>
-      <vmArgsSol>-Dorg.eclipse.equinox.console.jaas.file=./store
--Djava.security.auth.login.config=./configuration/org.eclipse.equinox.console.authentication.config
--Dlogback.configurationFile=./configuration/logback.xml
--Dssh.server.keystore=./configuration/hostkey.ser</vmArgsSol>
-      <vmArgsWin>-Dorg.eclipse.equinox.console.jaas.file=./store
--Djava.security.auth.login.config=./configuration/org.eclipse.equinox.console.authentication.config
--Dlogback.configurationFile=./configuration/logback.xml
--Dssh.server.keystore=./configuration/hostkey.ser</vmArgsWin>
+-Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
    </launcherArgs>
 
    <windowImages/>
@@ -42,14 +29,12 @@
       </win>
    </launcher>
 
-
    <vm>
       <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</linux>
       <macos include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</macos>
       <solaris include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</solaris>
       <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</windows>
    </vm>
-
 
    <plugins>
    </plugins>
@@ -113,6 +98,7 @@
       <property name="osgi.console.ssh.useDefaultSecureStorage" value="true" />
       <property name="osgi.framework.extensions" value="org.eclipse.equinox.weaving.hook" />
       <property name="osgi.noShutdown" value="true" />
+      <property name="ssh.custom.publickeys.auth" value="true" />
    </configurations>
 
 </product>
