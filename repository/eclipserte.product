@@ -3,7 +3,6 @@
 
 <product name="Eclipse RTE product" uid="eclipserte.product" version="0.0.1.qualifier" useFeatures="true" includeLaunchers="true">
 
-
    <configIni use="default">
    </configIni>
 
@@ -21,21 +20,24 @@
 -Xmx1024M</vmArgs>
       <vmArgsLin>-Dorg.eclipse.equinox.console.jaas.file=./store
 -Djava.security.auth.login.config=./org.eclipse.equinox.console.authentication.config
--Dlogback.configurationFile=./logback.xml</vmArgsLin>
+-Dlogback.configurationFile=./logback.xml
+-Dssh.server.keystore=./hostkey.ser</vmArgsLin>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts 
 -Dorg.eclipse.equinox.console.jaas.file=../../../store
 -Djava.security.auth.login.config=../../../org.eclipse.equinox.console.authentication.config
--Dlogback.configurationFile=../../../logback.xml</vmArgsMac>
+-Dlogback.configurationFile=../../../logback.xml
+-Dssh.server.keystore=../../../hostkey.ser</vmArgsMac>
       <vmArgsSol>-Dorg.eclipse.equinox.console.jaas.file=./store
 -Djava.security.auth.login.config=./org.eclipse.equinox.console.authentication.config
--Dlogback.configurationFile=./logback.xml</vmArgsSol>
+-Dlogback.configurationFile=./logback.xml
+-Dssh.server.keystore=./hostkey.ser</vmArgsSol>
       <vmArgsWin>-Dorg.eclipse.equinox.console.jaas.file=./store
 -Djava.security.auth.login.config=./org.eclipse.equinox.console.authentication.config
--Dlogback.configurationFile=./logback.xml</vmArgsWin>
+-Dlogback.configurationFile=./logback.xml
+-Dssh.server.keystore=./hostkey.ser</vmArgsWin>
    </launcherArgs>
 
    <windowImages/>
-
 
    <launcher>
       <solaris/>
@@ -43,7 +45,6 @@
          <bmp/>
       </win>
    </launcher>
-
 
    <vm>
       <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</linux>
@@ -65,13 +66,40 @@
    </features>
 
    <configurations>
-      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.core.expressions" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.variables" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.ecf" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.ecf.filetransfer" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.ecf.identity" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.ecf.provider.filetransfer" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.ecf.provider.filetransfer.httpclient" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.cm" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.frameworkadmin.equinox" autoStart="true" startLevel="3" />
-      <plugin id="org.eclipse.equinox.p2.console" autoStart="true" startLevel="3" />
+      <plugin id="org.eclipse.equinox.console.ssh" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.coordinator" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.frameworkadmin" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.artifact.repository" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.console" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.director" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.engine" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.garbagecollector" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.metadata.repository" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.operations" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.ql" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.touchpoint.eclipse" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.touchpoint.natives" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.p2.transport.ecf" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.security" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
-      <plugin id="org.eclipse.equinox.simpleconfigurator.manipulator" autoStart="true" startLevel="3" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator.manipulator" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.useradmin" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.weaving.caching" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.weaving.caching.j9" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
    </configurations>
 
 </product>
