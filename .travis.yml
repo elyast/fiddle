@@ -1,10 +1,15 @@
+---
 language: scala
 scala:
-   - 2.10.1
+- 2.10.1
 jdk:
-  - openjdk7
+- openjdk7
 script: mvn install
 after_success: mvn deploy
 env:
   global:
-    secure: "Ru2spYOxE+MVWCFc1Fcu0kVmt0oJBIMpoSpW3/mSwAOIY1icIXZnsPMK02onlfO6jYXi7/O017aqb6GAOMthIJOfpVUpd200I1PGjgfKJWmge/Q5Te789OJ1OClnlej5VJh2q45kpRgShw5ZJuDXrk2vKFzoTc1xjL+wYQrGr9s="
+  - secure: ! 'WdakfA0d2FfiqUgWVHQMeqjJaew4fXkPAaUjUedSQW2yRkzHFelYcLXmNdkm
+
+      FT+3VvvZxhGFp23s+HVP17pxnoMSRv31gR1uZB2t2U4Bi9/iZmII3vx9ZS9i
+
+      abnxGElVC/zhkP6iezlQpPpdzg35i9XB7BShZBqK2i9+9wRTjzY='
