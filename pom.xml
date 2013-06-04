@@ -6,6 +6,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Fiddle P2</name>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>		
+    	<github.global.userName>elyast</github.global.userName>
+    	<github.global.oauth2Token>${env.TOKEN}</github.global.oauth2Token>    
+	</properties>	
 
 	<modules>
 		<module>p2target</module>
@@ -13,5 +18,41 @@
 		<module>eclipserte.feature</module>
 		<module>repository</module>
 	</modules>
+
+  <build>
+    <plugins>
+      <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.7</version>
+          <configuration>
+              <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+          </configuration>
+      </plugin>
+      <plugin>
+          <groupId>com.github.github</groupId>
+          <artifactId>site-maven-plugin</artifactId>
+          <version>0.8</version>
+          <configuration>
+              <message>Maven artifacts for ${project.version}</message>  
+              <noJekyll>true</noJekyll>                                  
+              <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> 
+              <branch>refs/heads/master</branch>                       
+              <includes><include>**/*</include></includes>    
+              <path>maven2</path>
+              <merge>true</merge>
+              <repositoryOwner>elyast</repositoryOwner>
+              <repositoryName>elyast.github.com</repositoryName>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>site</goal>
+              </goals>
+              <phase>deploy</phase>
+            </execution>
+          </executions>
+        </plugin>   
+    </plugins>   
+  </build>	
 
 </project>

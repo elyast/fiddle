@@ -3,4 +3,8 @@ scala:
    - 2.10.1
 jdk:
   - openjdk7
-script: mvn install  
+script: mvn install
+after_success: mvn deploy
+env:
+  global:
+    secure: "Ru2spYOxE+MVWCFc1Fcu0kVmt0oJBIMpoSpW3/mSwAOIY1icIXZnsPMK02onlfO6jYXi7/O017aqb6GAOMthIJOfpVUpd200I1PGjgfKJWmge/Q5Te789OJ1OClnlej5VJh2q45kpRgShw5ZJuDXrk2vKFzoTc1xjL+wYQrGr9s="
