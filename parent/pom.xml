@@ -47,6 +47,11 @@
 			<name>Typesafe Repository</name>
 			<url>http://repo.typesafe.com/typesafe/releases/</url>
 		</repository>
+		<repository>
+			<id>elyast.github.io</id>
+			<name>Fiddle Repository</name>
+			<url>http://elyast.github.io/maven2/</url>
+		</repository>		
 	</repositories>
 
 	<dependencies>
@@ -55,6 +60,11 @@
 			<artifactId>scala-library</artifactId>
 			<version>${scala.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.elyast.bundles</groupId>
+			<artifactId>org.scala-lang.scala-library.source</artifactId>
+			<version>${scala.version}</version>
+		</dependency>		
 	</dependencies>
 	<build>
 		<plugins>

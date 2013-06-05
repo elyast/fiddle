@@ -16,6 +16,7 @@
 		<module>p2target</module>
 		<module>parent</module>
 		<module>eclipserte.feature</module>
+		<module>scalarte.feature</module>
 		<module>repository</module>
 	</modules>
 
