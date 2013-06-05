@@ -15,6 +15,108 @@
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-p2-director-plugin</artifactId>
 			</plugin>
+
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.8</version>	
+				<configuration>
+					<message>Maven artifacts for ${project.version}</message>  
+					<noJekyll>true</noJekyll>                                  
+					<branch>refs/heads/master</branch>                       
+					<includes><include>**/*</include></includes>    
+					<merge>true</merge>
+					<repositoryOwner>elyast</repositoryOwner>
+					<repositoryName>elyast.github.com</repositoryName>
+				</configuration>			
+				<executions>
+					<execution>
+						<id>deploy maven</id>
+						<configuration>
+							<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> 
+							<path>maven2</path>
+						</configuration>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+					<execution>
+						<id>deploy p2</id>
+						<configuration>
+							<outputDirectory>${project.build.directory}/merged</outputDirectory> 
+							<path>p2</path>
+						</configuration>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!--plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>checkout</id>
+						<phase>package</phase>
+						<goals>
+							<goal>checkout</goal>
+						</goals>
+						<configuration>
+							<scnVersion>gh-pages</scnVersion>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<basedir>${project.build.drirectory}/checkedout/</basedir>
+					<developerConnectionUrl>scm:git:https://github.com/elyast/elyast.github.com.git</developerConnectionUrl>
+					<username>elyast</username>
+					<password>${elyast.password}</password>
+					<includes>.</includes>
+				</configuration>
+			</plugin-->
+
+			<!-- Merge generated repository into gh-pages repository -->
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-p2-extras-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>mirror</goal>
+						</goals>
+					</execution>
+				</executions>
+
+				<configuration>
+					<!-- source repositories to mirror from -->
+					<source>
+						<repository>
+							<url>${project.build.directory}/repository</url>
+							<layout>p2</layout>
+						</repository>
+						<repository>
+							<url>http://elyast.github.io/p2/</url>
+							<layout>p2</layout>
+						</repository>						
+					</source>
+					<publishArtifacts>true</publishArtifacts>
+					<!-- The destination directory to mirror to. -->
+					<destination>${project.build.directory}/merged</destination>
+					<!-- whether to append to the target repository content -->
+					<append>true</append>
+					<!-- mirror artifacts and metadata -->
+					<mirrorMetadataOnly>false</mirrorMetadataOnly>
+					<!-- whether to compress the content.xml/artifacts.xml -->
+					<compress>true</compress>
+				</configuration>
+			</plugin>						
 		</plugins>
 	</build>
 </project>
