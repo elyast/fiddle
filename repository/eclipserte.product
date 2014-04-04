@@ -32,7 +32,7 @@
 
    <vm>
       <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</linux>
-      <macos include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</macos>
+      <macos include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7</macos>
       <solaris include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</solaris>
       <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</windows>
    </vm>
@@ -43,26 +43,22 @@
    <features>
       <feature id="org.elyast.fiddle.eclipserte.feature" version="0.0.1.qualifier"/>
       <feature id="org.elyast.fiddle.scalarte.feature" version="0.0.1.qualifier"/>
+      <feature id="org.elyast.fiddle.fp.feature" version="0.0.1.qualifier"/>
    </features>
 
    <configurations>
-      <plugin id="javax.annotation" autoStart="true" startLevel="0" />
-      <plugin id="javax.inject" autoStart="true" startLevel="0" />
-      <plugin id="javax.servlet" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.core.jobs" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.app" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.cm" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.registry" autoStart="true" startLevel="0" />
-      <plugin id="org.eclipse.core.jobs" autoStart="true" startLevel="0" />
-      <plugin id="org.eclipse.equinox.app" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.equinox.util" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
       <plugin id="org.eclipse.osgi.services" autoStart="true" startLevel="2" />
-      <plugin id="org.scala-lang.scala-library" autoStart="true" startLevel="0" />
-      <plugin id="org.slf4j.api" autoStart="true" startLevel="0" />
       <property name="eclipse.ignoreApp" value="true" />
       <property name="osgi.bundles.defaultStartLevel" value="4" />
       <property name="osgi.noShutdown" value="true" />
