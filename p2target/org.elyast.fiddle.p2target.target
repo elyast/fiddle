@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="remote" sequenceNumber="23">
+<?pde version="3.8"?><target includeMode="feature" name="remote" sequenceNumber="29">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="javax.mail.glassfish" version="1.4.1.v201108011116"/>
-<unit id="javax.mail.glassfish.source" version="1.4.1.v201108011116"/>
-<unit id="org.apache.mina.core" version="2.0.2.v201108120515"/>
-<unit id="org.apache.mina.core.source" version="2.0.2.v201108120515"/>
-<unit id="org.apache.log4j.source" version="1.2.15.v201012070815"/>
+<unit id="org.eclipse.equinox.compendium.sdk.feature.group" version="3.8.0.v20130813-1853"/>
+<unit id="org.eclipse.equinox.core.sdk.feature.group" version="3.8.0.v20140114-1344"/>
+<unit id="org.eclipse.core.runtime.feature.feature.group" version="1.1.0.v20140110-1610"/>
+<unit id="org.eclipse.equinox.core.feature.feature.group" version="1.1.0.v20140110-1610"/>
+<repository location="http://download.eclipse.org/eclipse/updates/4.3"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="ch.qos.logback.slf4j.source" version="1.0.7.v20121108-1250"/>
 <unit id="ch.qos.logback.classic.source" version="1.0.7.v20121108-1250"/>
 <unit id="org.slf4j.jul.source" version="1.7.2.v20121108-1250"/>
@@ -18,41 +20,13 @@
 <unit id="org.slf4j.api" version="1.7.2.v20121108-1250"/>
 <unit id="ch.qos.logback.core" version="1.0.7.v20121108-1250"/>
 <unit id="org.slf4j.log4j.source" version="1.7.2.v20130115-1340"/>
-<unit id="org.apache.log4j" version="1.2.15.v201012070815"/>
-<unit id="org.slf4j.nop.source" version="1.7.2.v201212060727"/>
-<unit id="org.slf4j.ext.source" version="1.7.2.v20121108-1250"/>
 <unit id="org.slf4j.ext" version="1.7.2.v20121108-1250"/>
+<unit id="org.slf4j.ext.source" version="1.7.2.v20121108-1250"/>
 <unit id="org.slf4j.jul" version="1.7.2.v20121108-1250"/>
 <unit id="org.slf4j.api.source" version="1.7.2.v20121108-1250"/>
-<unit id="org.apache.commons.logging" version="1.1.1.v201101211721"/>
 <unit id="ch.qos.logback.classic" version="1.0.7.v20121108-1250"/>
-<unit id="org.slf4j.nop" version="1.7.2.v201212060727"/>
-<unit id="org.apache.commons.logging.source" version="1.1.1.v201101211721"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140114142710/repository/"/>
 </location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.ajdt.feature.group" version="2.2.2.e42x-RELEASE-20130220-1400"/>
-<unit id="org.eclipse.platform.ide" version="4.2.2.M20130204-1200"/>
-<unit id="org.eclipse.contribution.weaving.feature.group" version="2.2.2.e42x-RELEASE-20130220-1400"/>
-<unit id="org.eclipse.equinox.sdk.feature.group" version="3.8.0.v20121212-203907-7M7fA78g4_y-gDvtH0ZcFvhMPDZJ"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.core.runtime.feature.feature.group" version="1.1.0.v20120521-2346-7H7NFHmBpeIm_Z5ZRXqjnySbXm9T"/>
-<unit id="org.eclipse.equinox.compendium.sdk.feature.group" version="3.8.0.v20120522-1841-7X7eGbBFPGjtJjxkb7SR1s-4B"/>
-<unit id="org.eclipse.equinox.core.feature.feature.group" version="1.1.0.v20121002-131448-7K7XFMVF7RZHQ_I9Wl8S7jlHU"/>
-<unit id="org.eclipse.equinox.p2.core.feature.feature.group" version="1.1.0.v20121211-153934-8297FndFWmE7h7Bpz-vcqkxyKz0"/>
-<unit id="org.eclipse.equinox.weaving.sdk.feature.group" version="1.0.200.v20120522-1841-79-FKsEVVFNVFsVk7O6G6"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.apache.felix.gogo.command" version="0.10.0.v201209301215"/>
-<unit id="org.apache.felix.gogo.command.source" version="0.10.0.v201209301215"/>
-<unit id="org.apache.felix.gogo.runtime" version="0.10.0.v201209301036"/>
-<unit id="org.apache.felix.gogo.runtime.source" version="0.10.0.v201209301036"/>
-<unit id="org.apache.felix.gogo.shell" version="0.10.0.v201212101605"/>
-<unit id="org.apache.felix.gogo.shell.source" version="0.10.0.v201212101605"/>
-<unit id="org.apache.sshd.core" version="0.7.0.v201303101611"/>
-<unit id="org.apache.sshd.core.source" version="0.7.0.v201303101611"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20130517111416/repository/"/>
-</location>
-<location path="${workspace_loc:/fiddle}/parent/target/dependency" type="Directory"/>
+<location path="${workspace_loc:/org.elyast.fiddle.parent/deps}" type="Directory"/>
 </locations>
 </target>

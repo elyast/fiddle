@@ -4,69 +4,21 @@
       label="Eclipse RTE"
       version="0.0.1.qualifier">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description>
+      Minimalistic OSGi runtime
    </description>
 
-   <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
-   </copyright>
-
-   <license url="http://www.example.com/license">
-      [Enter License Description here.]
+   <license url="http://www.apache.org/licenses/LICENSE-2.0.html">
+   	 Apache 2
    </license>
 
+   <includes
+         id="org.eclipse.equinox.core.feature"
+         version="0.0.0"/>
+
    <requires>
-      <import plugin="org.eclipse.osgi.services"/>
-      <import feature="org.eclipse.core.runtime.feature" version="1.1.0.v20120521-2346-7H7NFHlBpeIm_Y1_WXrenz0P9ad9" match="equivalent"/>
-      <import feature="org.eclipse.equinox.compendium.sdk" version="3.8.0.v20120522-1841-7X7eGb7FPGjtJjv1kjS_NdG"/>
       <import feature="org.eclipse.equinox.core.feature" version="1.1.0.v20120522-1841-7K7XFMTF7RZHQZI4_c8S-nnFB"/>
-      <import feature="org.eclipse.equinox.weaving.sdk" version="1.0.200.v20120522-1841-79-FKsEVVFNVFsVk7O6G6"/>
-      <import feature="org.eclipse.equinox.p2.core.feature" version="1.1.0.v20120524-0542-8297FncFWmE7h4Asx2cpqz-T38"/>
-      <import plugin="org.eclipse.osgi" version="3.2.0" match="compatible"/>
    </requires>
-
-   <plugin
-         id="org.apache.felix.gogo.command"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.felix.gogo.command.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.felix.gogo.runtime"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.felix.gogo.runtime.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.felix.gogo.shell"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.felix.gogo.shell.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
 
    <plugin
          id="ch.qos.logback.slf4j"
@@ -182,96 +134,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.aspectj.runtime"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/>
-
-   <plugin
-         id="org.aspectj.runtime.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.aspectj.weaver"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/>
-
-   <plugin
-         id="org.eclipse.equinox.console"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.equinox.console.jaas.fragment"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.equinox.console.jaas.fragment.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.equinox.console.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.equinox.console.ssh"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.equinox.console.ssh.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.mina.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.mina.core.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.sshd.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.sshd.core.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="javax.servlet"
          download-size="0"
          install-size="0"
@@ -286,57 +148,56 @@
          unpack="false"/>
 
    <plugin
-         id="javax.mail.glassfish"
+         id="javax.annotation"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="javax.mail.glassfish.source"
+         id="javax.annotation.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="javax.activation"
+         id="javax.inject"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="javax.activation.source"
+         id="javax.inject.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.osgi.util"
+         id="org.eclipse.equinox.event"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.osgi.util.source"
+         id="org.eclipse.equinox.event.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.equinox.transforms.hook"
+         id="org.eclipse.equinox.cm"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.equinox.transforms.hook.source"
+         id="org.eclipse.equinox.cm.source"
          download-size="0"
          install-size="0"
          version="0.0.0"

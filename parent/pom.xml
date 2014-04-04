@@ -7,7 +7,7 @@
 		<groupId>org.elyast.fiddle</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
-	</parent>	
+	</parent>
 	<artifactId>org.elyast.fiddle.parent</artifactId>
 	<packaging>pom</packaging>
 
@@ -16,26 +16,21 @@
 	</prerequisites>
 
 	<properties>
-		<tycho.version>0.17.0</tycho.version>
-		<scala.version>2.10.1</scala.version>
+		<tycho.version>0.20.0</tycho.version>
+		<scala.version>2.10.3</scala.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<repositories>
 		<repository>
-			<id>ajdt</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/tools/ajdt/42/update</url>
-		</repository>
-		<repository>
 			<id>indigo</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/eclipse/updates/4.2</url>
+			<url>http://download.eclipse.org/eclipse/updates/4.3</url>
 		</repository>
 		<repository>
 			<id>orbit-release</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20130517111416/repository/</url>
+			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20140114142710/repository/</url>
 		</repository>
 		<repository>
 			<id>oss</id>
@@ -51,7 +46,7 @@
 			<id>elyast.github.io</id>
 			<name>Fiddle Repository</name>
 			<url>http://elyast.github.io/maven2/</url>
-		</repository>		
+		</repository>
 	</repositories>
 
 	<dependencies>
@@ -64,7 +59,7 @@
 			<groupId>org.elyast.bundles</groupId>
 			<artifactId>org.scala-lang.scala-library.source</artifactId>
 			<version>${scala.version}</version>
-		</dependency>		
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -115,8 +110,8 @@
 				<version>${tycho.version}</version>
 				<configuration>
 					<encoding>UTF-8</encoding>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -128,6 +123,24 @@
 					<useUIHarness>false</useUIHarness>
 					<useUIThread>false</useUIThread>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.8</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/deps</outputDirectory>
+							<excludeTransitive>true</excludeTransitive>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 		<pluginManagement>
@@ -162,7 +175,7 @@
 				<plugin>
 					<groupId>net.alchim31.maven</groupId>
 					<artifactId>scala-maven-plugin</artifactId>
-					<version>3.0.1</version>
+					<version>3.1.6</version>
 					<executions>
 						<execution>
 							<id>scala-compile-first</id>
@@ -193,6 +206,39 @@
 								<version>${scala.version}</version>
 							</compilerPlugin>
 						</compilerPlugins>
+					</configuration>
+				</plugin>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.maven.plugins
+										</groupId>
+										<artifactId>
+											maven-dependency-plugin
+										</artifactId>
+										<versionRange>
+											[2.8,)
+										</versionRange>
+										<goals>
+											<goal>
+												copy-dependencies
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin>
 			</plugins>

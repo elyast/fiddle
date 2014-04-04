@@ -17,6 +17,7 @@
 		<module>parent</module>
 		<module>eclipserte.feature</module>
 		<module>scalarte.feature</module>
+		<module>fp</module>
 		<module>repository</module>
 	</modules>
 
