@@ -16,6 +16,13 @@
       [Enter License Description here.]
    </license>
 
+   <requires>
+      <import plugin="org.scala-lang.scala-library"/>
+      <import plugin="org.eclipse.osgi"/>
+      <import plugin="org.slf4j.api"/>
+      <import plugin="org.scalaz.core"/>
+   </requires>
+
    <plugin
          id="org.elyast.fiddle.fp"
          download-size="0"

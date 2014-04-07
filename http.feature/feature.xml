@@ -1,89 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.elyast.fiddle.scalarte.feature"
-      label="Scala RTE"
+      id="org.elyast.fiddle.http.feature"
+      label="Feature"
       version="0.0.1.qualifier">
 
-   <description>
-      Scala Runtime
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
    </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
 
    <requires>
       <import plugin="org.eclipse.osgi"/>
+      <import plugin="org.slf4j.api"/>
+      <import plugin="org.scala-lang.scala-library"/>
+      <import plugin="javax.inject"/>
+      <import plugin="javax.servlet"/>
+      <import plugin="org.slf4j.jcl"/>
+      <import plugin="org.slf4j.log4j"/>
+      <import plugin="com.google.guava"/>
+      <import plugin="org.scala-lang.scalap"/>
+      <import plugin="com.google.protobuf"/>
    </requires>
 
    <plugin
-         id="org.scala-lang.scala-library"
+         id="org.apache.commons.codec"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.scalaz.core"
+         id="org.apache.commons.io"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.scalaz.concurrent"
+         id="com.ning.async-http-client"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.scalaz.effect"
+         id="net.databinder.dispatch"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.scalaz.iteratee"
+         id="com.thoughtworks.paranamer"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.scalaz.stream"
+         id="net.databinder.unfiltered"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.scalaz.typelevel"
+         id="org.json4s"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="com.chuusai.shapeless.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.scala-lang.scala-reflect"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.scala-lang.scalap"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.scala-lang.scala-compiler"
+         id="io.netty"
          download-size="0"
          install-size="0"
          version="0.0.0"

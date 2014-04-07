@@ -19,6 +19,10 @@
 		<tycho.version>0.20.0</tycho.version>
 		<scala.version>2.10.3</scala.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<scalaz.version>7.0.6</scalaz.version>
+		<dispatch.version>0.11.0</dispatch.version>
+		<unfiltered.version>0.7.1</unfiltered.version>
+		<json4s.version>3.2.8</json4s.version>
 	</properties>
 
 	<repositories>
@@ -43,6 +47,11 @@
 			<url>http://repo.typesafe.com/typesafe/releases/</url>
 		</repository>
 		<repository>
+			<id>scalaz-stream</id>
+			<name>Scalaz Stream</name>
+			<url>http://dl.bintray.com/scalaz/releases</url>
+		</repository>
+		<repository>
 			<id>elyast.github.io</id>
 			<name>Fiddle Repository</name>
 			<url>http://elyast.github.io/maven2/</url>
@@ -50,6 +59,7 @@
 	</repositories>
 
 	<dependencies>
+		<!-- Scala -->
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
@@ -60,7 +70,115 @@
 			<artifactId>org.scala-lang.scala-library.source</artifactId>
 			<version>${scala.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-reflect</artifactId>
+			<version>${scala.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scalap</artifactId>
+			<version>${scala.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.scalaz</groupId>
+			<artifactId>scalaz-core_2.10</artifactId>
+			<version>${scalaz.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.scalaz</groupId>
+			<artifactId>scalaz-effect_2.10</artifactId>
+			<version>${scalaz.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.scalaz</groupId>
+			<artifactId>scalaz-concurrent_2.10</artifactId>
+			<version>${scalaz.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.scalaz</groupId>
+			<artifactId>scalaz-iteratee_2.10</artifactId>
+			<version>${scalaz.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.scalaz</groupId>
+			<artifactId>scalaz-typelevel_2.10</artifactId>
+			<version>${scalaz.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.scalaz.stream</groupId>
+			<artifactId>scalaz-stream_2.10</artifactId>
+			<version>0.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.chuusai</groupId>
+			<artifactId>shapeless_2.10.3</artifactId>
+			<version>2.0.0-M1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.elyast.bundles</groupId>
+			<artifactId>org.scala-lang.scalap</artifactId>
+			<version>${scala.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-compiler</artifactId>
+			<version>${scala.version}</version>
+		</dependency>
+		<!-- http -->
+		<dependency>
+			<groupId>org.elyast.bundles</groupId>
+			<artifactId>net.databinder.unfiltered_2.10</artifactId>
+			<version>${unfiltered.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.elyast.bundles</groupId>
+			<artifactId>net.databinder.dispatch_2.10</artifactId>
+			<version>${dispatch.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.elyast.bundles</groupId>
+			<artifactId>org.json4s_2.10</artifactId>
+			<version>${json4s.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.elyast.bundles</groupId>
+			<artifactId>com.thoughtworks.paranamer</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ning</groupId>
+			<artifactId>async-http-client</artifactId>
+			<version>1.7.24</version>
+		</dependency>
+		<dependency>
+			<groupId>org.elyast.bundles</groupId>
+			<artifactId>io.netty</artifactId>
+			<version>3.6.8.Final</version>
+		</dependency>
+		<!-- Google Protocol Buffers - completely optional -->
+		<dependency>
+			<groupId>com.google.protobuf</groupId>
+			<artifactId>protobuf-java</artifactId>
+			<version>2.5.0</version>
+		</dependency>
 	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.scalacheck</groupId>
+				<artifactId>scalacheck_2.10</artifactId>
+				<version>1.11.3</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.specs2</groupId>
+				<artifactId>specs2_2.10</artifactId>
+				<version>2.3.10</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<build>
 		<plugins>
 			<plugin>
@@ -190,7 +308,8 @@
 						</compilerPlugins>
 					</configuration>
 				</plugin>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
