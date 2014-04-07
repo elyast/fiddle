@@ -44,7 +44,7 @@
               <path>maven2</path>
               <merge>true</merge>
               <repositoryOwner>elyast</repositoryOwner>
-              <repositoryName>elyast.github.com</repositoryName>
+              <repositoryName>elyast.github.io</repositoryName>
           </configuration>
           <executions>
             <execution>
