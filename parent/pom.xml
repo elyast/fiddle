@@ -23,6 +23,11 @@
 		<dispatch.version>0.11.0</dispatch.version>
 		<unfiltered.version>0.7.1</unfiltered.version>
 		<json4s.version>3.2.8</json4s.version>
+        <asm.version>4.1</asm.version>
+        <specs2.version>2.3.11</specs2.version>
+        <scalacheck.version>1.11.3</scalacheck.version>
+        <discipline.version>0.1</discipline.version>
+        <spire.version>0.7.3</spire.version>
 	</properties>
 
 	<repositories>
@@ -75,110 +80,333 @@
 			<artifactId>scala-reflect</artifactId>
 			<version>${scala.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.scala-lang</groupId>
-			<artifactId>scalap</artifactId>
-			<version>${scala.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scala-lang.scala-reflect.source</artifactId>
+            <version>${scala.version}</version>
+        </dependency>    
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.mockito.core</artifactId>
+            <version>1.9.5</version>
+        </dependency>   
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.mockito.core.source</artifactId>
+            <version>1.9.5</version>
+        </dependency>          
 		<dependency>
 			<groupId>org.scalaz</groupId>
 			<artifactId>scalaz-core_2.10</artifactId>
 			<version>${scalaz.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scalaz.core_2.10.source</artifactId>
+            <version>${scalaz.version}</version>
+        </dependency>        
 		<dependency>
 			<groupId>org.scalaz</groupId>
 			<artifactId>scalaz-effect_2.10</artifactId>
 			<version>${scalaz.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scalaz.effect_2.10.source</artifactId>
+            <version>${scalaz.version}</version>
+        </dependency>         
 		<dependency>
 			<groupId>org.scalaz</groupId>
 			<artifactId>scalaz-concurrent_2.10</artifactId>
 			<version>${scalaz.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scalaz.concurrent_2.10.source</artifactId>
+            <version>${scalaz.version}</version>
+        </dependency>         
 		<dependency>
 			<groupId>org.scalaz</groupId>
 			<artifactId>scalaz-iteratee_2.10</artifactId>
 			<version>${scalaz.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scalaz.iteratee_2.10.source</artifactId>
+            <version>${scalaz.version}</version>
+        </dependency>         
 		<dependency>
 			<groupId>org.scalaz</groupId>
 			<artifactId>scalaz-typelevel_2.10</artifactId>
 			<version>${scalaz.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scalaz.typelevel_2.10.source</artifactId>
+            <version>${scalaz.version}</version>
+        </dependency>   
+        <dependency>
+            <groupId>org.scalaz</groupId>
+            <artifactId>scalaz-scalacheck-binding_2.10</artifactId>
+            <version>${scalaz.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scalaz.scalacheck.binding_2.10.source</artifactId>
+            <version>${scalaz.version}</version>
+        </dependency>              
 		<dependency>
 			<groupId>org.scalaz.stream</groupId>
 			<artifactId>scalaz-stream_2.10</artifactId>
 			<version>0.3.1</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scalaz.stream_2.10.source</artifactId>
+            <version>0.3.1</version>
+        </dependency>         
 		<dependency>
 			<groupId>com.chuusai</groupId>
 			<artifactId>shapeless_2.10.3</artifactId>
 			<version>2.0.0-M1</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>com.chuusai.shapeless.core_2.10.3.source</artifactId>
+            <version>2.0.0.M1</version>
+        </dependency>         
 		<dependency>
 			<groupId>org.elyast.bundles</groupId>
 			<artifactId>org.scala-lang.scalap</artifactId>
 			<version>${scala.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scala-lang.scalap.source</artifactId>
+            <version>${scala.version}</version>
+        </dependency>        
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-compiler</artifactId>
 			<version>${scala.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scala-lang.scala-compiler.source</artifactId>
+            <version>${scala.version}</version>
+        </dependency>        
 		<!-- http -->
 		<dependency>
 			<groupId>org.elyast.bundles</groupId>
 			<artifactId>net.databinder.unfiltered_2.10</artifactId>
 			<version>${unfiltered.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>net.databinder.unfiltered_2.10.source</artifactId>
+            <version>${unfiltered.version}</version>
+        </dependency>        
 		<dependency>
 			<groupId>org.elyast.bundles</groupId>
 			<artifactId>net.databinder.dispatch_2.10</artifactId>
 			<version>${dispatch.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>net.databinder.dispatch_2.10.source</artifactId>
+            <version>${dispatch.version}</version>
+        </dependency>        
 		<dependency>
 			<groupId>org.elyast.bundles</groupId>
 			<artifactId>org.json4s_2.10</artifactId>
 			<version>${json4s.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.json4s_2.10.source</artifactId>
+            <version>${json4s.version}</version>
+        </dependency>        
 		<dependency>
 			<groupId>org.elyast.bundles</groupId>
 			<artifactId>com.thoughtworks.paranamer</artifactId>
 			<version>2.6</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>com.thoughtworks.paranamer.source</artifactId>
+            <version>2.6</version>
+        </dependency>        
 		<dependency>
 			<groupId>com.ning</groupId>
 			<artifactId>async-http-client</artifactId>
 			<version>1.7.24</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>com.ning.async-http-client.source</artifactId>
+            <version>1.7.24</version>
+        </dependency>         
 		<dependency>
 			<groupId>org.elyast.bundles</groupId>
 			<artifactId>io.netty</artifactId>
 			<version>3.6.8.Final</version>
 		</dependency>
-		<!-- Google Protocol Buffers - completely optional -->
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>io.netty.source</artifactId>
+            <version>3.6.8.Final</version>
+        </dependency>        		
 		<dependency>
 			<groupId>com.google.protobuf</groupId>
 			<artifactId>protobuf-java</artifactId>
 			<version>2.5.0</version>
 		</dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>com.google.protobuf.source</artifactId>
+            <version>2.5.0</version>
+        </dependency>        
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>io.argonaut_2.10</artifactId>
+            <version>6.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>io.argonaut_2.10.source</artifactId>
+            <version>6.0.3</version>
+        </dependency>  
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.hamcrest.core</artifactId>
+            <version>1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.hamcrest.core.source</artifactId>
+            <version>1.3</version>
+        </dependency>  
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm</artifactId>
+            <version>${asm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.objectweb.asm.source</artifactId>
+            <version>${asm.version}</version>
+        </dependency>         
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-tree</artifactId>
+            <version>${asm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.objectweb.asm.tree.source</artifactId>
+            <version>${asm.version}</version>
+        </dependency>         
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-analysis</artifactId>
+            <version>${asm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.objectweb.asm.analysis.source</artifactId>
+            <version>${asm.version}</version>
+        </dependency>         
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-util</artifactId>
+            <version>${asm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.objectweb.asm.util.source</artifactId>
+            <version>${asm.version}</version>
+        </dependency>   
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.parboiled</artifactId>
+            <version>1.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.parboiled.source</artifactId>
+            <version>1.1.4</version>
+        </dependency> 
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.pegdown</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.pegdown.source</artifactId>
+            <version>1.2.1</version>
+        </dependency>   
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scalacheck_2.10</artifactId>
+            <version>${scalacheck.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scalacheck_2.10.source</artifactId>
+            <version>${scalacheck.version}</version>
+        </dependency>       
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scalamacros.quasiquotes_2.10</artifactId>
+            <version>2.0.0.M7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.scalamacros.quasiquotes_2.10.source</artifactId>
+            <version>2.0.0.M7</version>
+        </dependency> 
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.specs2_2.10</artifactId>
+            <version>${specs2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.specs2_2.10.source</artifactId>
+            <version>${specs2.version}</version>
+        </dependency> 
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.spire-math.spire_2.10</artifactId>
+            <version>${spire.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.spire-math.spire_2.10.source</artifactId>
+            <version>${spire.version}</version>
+        </dependency>   
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.spire-math.spire-scalacheck-binding_2.10</artifactId>
+            <version>${spire.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.spire-math.spire-scalacheck-binding_2.10.source</artifactId>
+            <version>${spire.version}</version>
+        </dependency> 
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.typelevel.discipline_2.10</artifactId>
+            <version>${discipline.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.typelevel.discipline_2.10.source</artifactId>
+            <version>${discipline.version}</version>
+        </dependency>                                                                       
 	</dependencies>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.scalacheck</groupId>
-				<artifactId>scalacheck_2.10</artifactId>
-				<version>1.11.3</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.specs2</groupId>
-				<artifactId>specs2_2.10</artifactId>
-				<version>2.3.10</version>
-				<scope>test</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 	<build>
 		<plugins>
 			<plugin>

@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.elyast.fiddle.eclipserte.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.eclipserte.feature" version="0.0.1.qualifier">
+   <feature url="features/org.elyast.fiddle.osgi.runtime.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.osgi.runtime.feature" version="0.0.1.qualifier">
       <category name="modules"/>
    </feature>
-   <feature url="features/org.elyast.fiddle.scalarte.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.scalarte.feature" version="0.0.1.qualifier">
+   <feature url="features/org.elyast.fiddle.typelevel.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.typelevel.feature" version="0.0.1.qualifier">
       <category name="modules"/>
    </feature>
+
+   <feature url="features/org.elyast.fiddle.http.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.http.feature" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>
+
+   <feature url="features/org.elyast.fiddle.typelevel.test.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.typelevel.test.feature" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>
+      
    <category-def name="modules" label="Modules"/>
 </site>

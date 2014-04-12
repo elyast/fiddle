@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.elyast.fiddle.http.feature"
-      label="Feature"
+      label="HTTP Feature"
       version="0.0.1.qualifier">
 
    <description url="http://www.example.com/description">
@@ -80,6 +80,13 @@
 
    <plugin
          id="io.netty"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.elyast.fiddle.http.service"
          download-size="0"
          install-size="0"
          version="0.0.0"
