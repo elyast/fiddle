@@ -1,47 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target includeMode="feature" name="remote" sequenceNumber="48">
+<?pde version="3.8"?><target includeMode="feature" name="remote" sequenceNumber="57">
 <locations>
+<location path="${workspace_loc:/org.elyast.fiddle.p2target/target/deps}" type="Directory"/>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="ch.qos.logback.slf4j.source" version="1.0.7.v20121108-1250"/>
-<unit id="ch.qos.logback.classic.source" version="1.0.7.v20121108-1250"/>
-<unit id="org.slf4j.jul.source" version="1.7.2.v20121108-1250"/>
-<unit id="org.slf4j.log4j" version="1.7.2.v20130115-1340"/>
-<unit id="org.slf4j.jcl" version="1.7.2.v20130115-1340"/>
-<unit id="ch.qos.logback.slf4j" version="1.0.7.v20121108-1250"/>
-<unit id="ch.qos.logback.core.source" version="1.0.7.v20121108-1250"/>
-<unit id="org.slf4j.jcl.source" version="1.7.2.v20130115-1340"/>
-<unit id="org.slf4j.api" version="1.7.2.v20121108-1250"/>
-<unit id="ch.qos.logback.core" version="1.0.7.v20121108-1250"/>
-<unit id="org.slf4j.log4j.source" version="1.7.2.v20130115-1340"/>
-<unit id="org.slf4j.ext" version="1.7.2.v20121108-1250"/>
-<unit id="org.slf4j.ext.source" version="1.7.2.v20121108-1250"/>
-<unit id="org.slf4j.jul" version="1.7.2.v20121108-1250"/>
-<unit id="org.slf4j.api.source" version="1.7.2.v20121108-1250"/>
-<unit id="ch.qos.logback.classic" version="1.0.7.v20121108-1250"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140114142710/repository/"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.equinox.serverside.sdk.feature.group" version="3.9.1.v20140221-1852"/>
-<unit id="org.eclipse.equinox.p2.discovery.feature.feature.group" version="1.0.100.v20130502-0334"/>
-<unit id="org.eclipse.equinox.core.sdk.feature.group" version="3.8.0.v20140114-1344"/>
-<unit id="org.eclipse.equinox.p2.core.feature.feature.group" version="1.2.1.v20140221-1852"/>
-<unit id="org.eclipse.equinox.server.core.feature.group" version="1.2.0.v20140110-1610"/>
-<unit id="org.eclipse.equinox.weaving.sdk.feature.group" version="1.0.200.v20130327-1442"/>
-<unit id="org.eclipse.equinox.server.jetty.feature.group" version="1.1.1.v20140113-1859"/>
-<unit id="org.eclipse.equinox.server.p2.feature.group" version="1.2.1.v20140221-1852"/>
 <unit id="org.eclipse.core.runtime.feature.feature.group" version="1.1.0.v20140110-1610"/>
 <unit id="org.eclipse.equinox.compendium.sdk.feature.group" version="3.8.0.v20130813-1853"/>
-<unit id="org.eclipse.equinox.p2.sdk.feature.group" version="3.8.1.v20140221-1852"/>
 <unit id="org.eclipse.equinox.core.feature.feature.group" version="1.1.0.v20140110-1610"/>
 <repository location="http://download.eclipse.org/eclipse/updates/4.3"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="com.google.guava" version="11.0.2.v201303041551"/>
-<unit id="com.google.guava.source" version="11.0.2.v201303041551"/>
-<unit id="org.apache.commons.io" version="1.4.0.v20081110-1000"/>
+<unit id="org.junit" version="4.11.0.v201303080030"/>
+<unit id="org.hamcrest.core" version="1.3.0.v201303031735"/>
+<unit id="org.slf4j.log4j" version="1.7.2.v20130115-1340"/>
+<unit id="ch.qos.logback.slf4j" version="1.0.7.v20121108-1250"/>
+<unit id="org.slf4j.api" version="1.7.2.v20121108-1250"/>
+<unit id="ch.qos.logback.core" version="1.0.7.v20121108-1250"/>
+<unit id="org.slf4j.log4j.source" version="1.7.2.v20130115-1340"/>
+<unit id="com.google.guava.source" version="12.0.0.v201212092141"/>
+<unit id="org.slf4j.ext.source" version="1.7.2.v20121108-1250"/>
+<unit id="org.slf4j.jul" version="1.7.2.v20121108-1250"/>
+<unit id="org.apache.commons.codec" version="1.4.0.v201209201156"/>
+<unit id="org.junit.source" version="4.11.0.v201303080030"/>
+<unit id="org.slf4j.api.source" version="1.7.2.v20121108-1250"/>
+<unit id="javax.servlet" version="3.0.0.v201112011016"/>
+<unit id="javax.servlet.source" version="3.0.0.v201112011016"/>
 <unit id="org.apache.commons.io.source" version="1.4.0.v20081110-1000"/>
+<unit id="ch.qos.logback.slf4j.source" version="1.0.7.v20121108-1250"/>
+<unit id="ch.qos.logback.classic.source" version="1.0.7.v20121108-1250"/>
+<unit id="org.slf4j.jul.source" version="1.7.2.v20121108-1250"/>
+<unit id="org.slf4j.jcl" version="1.7.2.v20130115-1340"/>
+<unit id="ch.qos.logback.core.source" version="1.0.7.v20121108-1250"/>
+<unit id="org.apache.commons.codec.source" version="1.4.0.v201209201156"/>
+<unit id="org.slf4j.jcl.source" version="1.7.2.v20130115-1340"/>
+<unit id="com.google.guava" version="12.0.0.v201212092141"/>
+<unit id="org.slf4j.ext" version="1.7.2.v20121108-1250"/>
+<unit id="org.apache.commons.io" version="1.4.0.v20081110-1000"/>
+<unit id="ch.qos.logback.classic" version="1.0.7.v20121108-1250"/>
+<unit id="org.hamcrest.core.source" version="1.3.0.v201303031735"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140114142710/repository/"/>
 </location>
-<location path="${workspace_loc:/org.elyast.fiddle.p2target/target/deps}" type="Directory"/>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="javax.inject" version="1.0.0.v20091030"/>
+<unit id="org.objenesis.source" version="1.0.0.v201105211943"/>
+<unit id="org.objenesis" version="1.0.0.v201105211943"/>
+<unit id="javax.inject.source" version="1.0.0.v20091030"/>
+<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20140114142710/repository/"/>
+</location>
 </locations>
 </target>
