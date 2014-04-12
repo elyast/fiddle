@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.elyast.fiddle.typelevel.test.feature.source"
+      label="Typelevel test libraries sources"
+      version="0.0.1.qualifier">
+
+   <description>
+      Scala typelevel test runtime
+   </description>
+
+   <requires>
+      <import plugin="org.eclipse.osgi"/>
+   </requires>
+
+</feature>

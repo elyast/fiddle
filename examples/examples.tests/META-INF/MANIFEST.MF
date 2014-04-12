@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Examples tests
+Bundle-SymbolicName: org.elyast.fiddle.examples.tests
+Bundle-Version: 0.0.1.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.scala-lang.scala-library
+Service-Component: OSGI-INF/*.xml

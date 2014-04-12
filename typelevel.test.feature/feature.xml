@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.elyast.fiddle.typelevel.test.feature"
+      label="Typelevel test libraries"
+      version="0.0.1.qualifier">
+
+   <description>
+      Scala typelevel test runtime
+   </description>
+
+   <requires>
+      <import plugin="org.eclipse.osgi"/>
+   </requires>
+
+
+   <plugin
+         id="org.specs2"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>   
+
+   <plugin
+         id="org.scalacheck"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/> 
+
+   <plugin
+         id="org.junit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/> 
+
+   <plugin
+         id="org.mockito.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/> 
+
+   <plugin
+         id="org.hamcrest.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/> 
+
+   <plugin
+         id="org.pegdown"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>  
+
+   <plugin
+         id="org.parboiled"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>  
+
+   <plugin
+         id="org.scalamacros.quasiquotes"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/> 
+
+   <plugin
+         id="org.objectweb.asm"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>                                    
+
+   <plugin
+         id="org.objectweb.asm.analysis"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.objectweb.asm.tree"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>     
+
+   <plugin
+         id="org.objectweb.asm.util"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>  
+
+   <plugin
+         id="org.scalaz.scalacheck.binding"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>  
+
+   <plugin
+         id="org.spire-math.spire-scalacheck-binding"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/> 
+
+   <plugin
+         id="org.typelevel.discipline"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>                                   
+</feature>
