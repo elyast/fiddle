@@ -6,14 +6,23 @@
    <feature url="features/org.elyast.fiddle.typelevel.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.typelevel.feature" version="0.0.1.qualifier">
       <category name="modules"/>
    </feature>
-
    <feature url="features/org.elyast.fiddle.http.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.http.feature" version="0.0.1.qualifier">
       <category name="modules"/>
    </feature>
-
    <feature url="features/org.elyast.fiddle.typelevel.test.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.typelevel.test.feature" version="0.0.1.qualifier">
       <category name="modules"/>
    </feature>
-      
+   <feature url="features/org.elyast.fiddle.http.feature.source_0.0.1.qualifier.jar" id="org.elyast.fiddle.http.feature.source" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>
+   <feature url="features/org.elyast.fiddle.osgi.runtime.feature.source_0.0.1.qualifier.jar" id="org.elyast.fiddle.osgi.runtime.feature.source" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>
+   <feature url="features/org.elyast.fiddle.typelevel.feature.source_0.0.1.qualifier.jar" id="org.elyast.fiddle.typelevel.feature.source" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>
+   <feature url="features/org.elyast.fiddle.typelevel.test.feature.source_0.0.1.qualifier.jar" id="org.elyast.fiddle.typelevel.test.feature.source" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>
    <category-def name="modules" label="Modules"/>
 </site>

@@ -405,7 +405,18 @@
             <groupId>org.elyast.bundles</groupId>
             <artifactId>org.typelevel.discipline_2.10.source</artifactId>
             <version>${discipline.version}</version>
-        </dependency>                                                                       
+        </dependency>  
+
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>com.typesafe.scalalogging_2.10</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>com.typesafe.scalalogging_2.10.source</artifactId>
+            <version>1.1.0</version>
+        </dependency>                                                                             
 	</dependencies>
 	<build>
 		<plugins>

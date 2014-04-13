@@ -16,44 +16,6 @@
 				<artifactId>tycho-p2-director-plugin</artifactId>
 			</plugin>
 
-			<plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>site-maven-plugin</artifactId>
-				<version>0.8</version>	
-				<configuration>
-					<message>Maven artifacts for ${project.version}</message>  
-					<noJekyll>true</noJekyll>                                  
-					<branch>refs/heads/master</branch>                       
-					<includes><include>**/*</include></includes>    
-					<merge>true</merge>
-					<repositoryOwner>elyast</repositoryOwner>
-					<repositoryName>elyast.github.com</repositoryName>
-				</configuration>			
-				<executions>
-					<execution>
-						<id>deploy maven</id>
-						<configuration>
-							<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> 
-							<path>maven2</path>
-						</configuration>
-						<goals>
-							<goal>site</goal>
-						</goals>
-						<phase>deploy</phase>
-					</execution>
-					<execution>
-						<id>deploy p2</id>
-						<configuration>
-							<outputDirectory>${project.build.directory}/merged</outputDirectory> 
-							<path>p2</path>
-						</configuration>
-						<goals>
-							<goal>site</goal>
-						</goals>
-						<phase>deploy</phase>
-					</execution>
-				</executions>
-			</plugin>
 
 			<!-- Merge generated repository into gh-pages repository -->
 			<!--plugin>
