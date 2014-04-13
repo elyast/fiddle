@@ -24,7 +24,7 @@
 		<unfiltered.version>0.7.1</unfiltered.version>
 		<json4s.version>3.2.8</json4s.version>
         <asm.version>4.1</asm.version>
-        <specs2.version>2.3.11</specs2.version>
+        <specs2.version>2.3.10</specs2.version>
         <scalacheck.version>1.11.3</scalacheck.version>
         <discipline.version>0.1</discipline.version>
         <spire.version>0.7.3</spire.version>
@@ -358,13 +358,13 @@
         </dependency>       
         <dependency>
             <groupId>org.elyast.bundles</groupId>
-            <artifactId>org.scalamacros.quasiquotes_2.10</artifactId>
-            <version>2.0.0.M7</version>
+            <artifactId>org.scalamacros.quasiquotes_2.10.3</artifactId>
+            <version>2.0.0.M3</version>
         </dependency>
         <dependency>
             <groupId>org.elyast.bundles</groupId>
-            <artifactId>org.scalamacros.quasiquotes_2.10.source</artifactId>
-            <version>2.0.0.M7</version>
+            <artifactId>org.scalamacros.quasiquotes_2.10.3.source</artifactId>
+            <version>2.0.0.M3</version>
         </dependency> 
         <dependency>
             <groupId>org.elyast.bundles</groupId>
@@ -460,16 +460,55 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-surefire-plugin</artifactId>
-				<version>${tycho.version}</version>
-				<configuration>
-					<argLine>-Xmx1024m</argLine>
-					<useUIHarness>false</useUIHarness>
-					<useUIThread>false</useUIThread>
-				</configuration>
-			</plugin>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-surefire-plugin</artifactId>
+                <version>${tycho.version}</version>
+                <configuration>
+                    <useUIHarness>false</useUIHarness>
+                    <useUIThread>false</useUIThread>
+                    <showEclipseLog>true</showEclipseLog>
+                    <includes>
+                        <include>**/*Spec.scala</include>
+                    </includes>                   
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.1.6</version>
+                <executions>
+                    <execution>
+                        <id>scala-compile-first</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>scala-test-compile</id>
+                        <phase>process-test-resources</phase>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <scalaVersion>${scala.version}</scalaVersion>
+                    <sendJavaToScalac>false</sendJavaToScalac>
+                    <args>
+                        <arg>-P:continuations:enable</arg>
+                    </args>
+                    <compilerPlugins>
+                        <compilerPlugin>
+                            <groupId>org.scala-lang.plugins</groupId>
+                            <artifactId>continuations</artifactId>
+                            <version>${scala.version}</version>
+                        </compilerPlugin>
+                    </compilerPlugins>
+                </configuration>
+            </plugin>            
 		</plugins>
 		<pluginManagement>
 			<plugins>
@@ -498,42 +537,6 @@
 					<version>${tycho.version}</version>
 					<configuration>
 						<publishArtifacts>true</publishArtifacts>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>net.alchim31.maven</groupId>
-					<artifactId>scala-maven-plugin</artifactId>
-					<version>3.1.6</version>
-					<executions>
-						<execution>
-							<id>scala-compile-first</id>
-							<phase>process-resources</phase>
-							<goals>
-								<goal>add-source</goal>
-								<goal>compile</goal>
-							</goals>
-						</execution>
-						<execution>
-							<id>scala-test-compile</id>
-							<phase>process-test-resources</phase>
-							<goals>
-								<goal>testCompile</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<scalaVersion>${scala.version}</scalaVersion>
-						<sendJavaToScalac>false</sendJavaToScalac>
-						<args>
-							<arg>-P:continuations:enable</arg>
-						</args>
-						<compilerPlugins>
-							<compilerPlugin>
-								<groupId>org.scala-lang.plugins</groupId>
-								<artifactId>continuations</artifactId>
-								<version>${scala.version}</version>
-							</compilerPlugin>
-						</compilerPlugins>
 					</configuration>
 				</plugin>
 				<!--This plugin's configuration is used to store Eclipse m2e settings 

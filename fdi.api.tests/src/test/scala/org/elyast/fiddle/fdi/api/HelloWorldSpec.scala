@@ -1,7 +1,10 @@
-package org.elyast.fiddle.examples.repository
+package org.elyast.fiddle.fdi.api;
 
 import org.specs2.mutable._
+import org.junit.runner.RunWith
+import org.specs2.runner.JUnitRunner
 
+@RunWith(classOf[JUnitRunner])
 class HelloWorldSpec extends Specification {
 
   "The 'Hello world' string" should {

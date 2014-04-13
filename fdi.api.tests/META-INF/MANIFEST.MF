@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Functional dependency injection API
+Bundle-SymbolicName: org.elyast.fiddle.fdi.api.tests
+Bundle-Version: 0.0.1.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.scala-lang.scala-library,
+ org.junit;bundle-version="4.11.0",
+ org.specs2;bundle-version="2.3.10",
+ org.hamcrest;bundle-version="1.1.0",
+ org.mockito.core;bundle-version="1.9.5"
+Fragment-Host: org.elyast.fiddle.fdi.api
+
+

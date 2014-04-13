@@ -7,7 +7,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../parent/pom.xml</relativePath>
 	</parent>
-	<artifactId>org.elyast.fiddle.http.service</artifactId>
-	<packaging>eclipse-plugin</packaging>
-
+	<artifactId>org.elyast.fiddle.fdi.api.tests</artifactId>
+	<packaging>eclipse-test-plugin</packaging>
+	
 </project>

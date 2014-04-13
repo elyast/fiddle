@@ -19,6 +19,7 @@
         <module>osgi.runtime.feature.source</module>
         
         <module>fdi.api</module>
+        <module>fdi.api.tests</module>
 		<module>typelevel.feature</module>
         <module>typelevel.feature.source</module>
         <module>typelevel.test.feature</module>
