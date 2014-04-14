@@ -19,14 +19,15 @@
    <requires>
       <import plugin="org.eclipse.osgi"/>
       <import plugin="org.slf4j.api"/>
+      <import plugin="com.google.guava"/>
       <import plugin="org.scala-lang.scala-library"/>
       <import plugin="javax.inject"/>
+      <import plugin="org.scala-lang.scalap"/>
+      <import plugin="com.google.protobuf"/>
       <import plugin="javax.servlet"/>
       <import plugin="org.slf4j.jcl"/>
       <import plugin="org.slf4j.log4j"/>
-      <import plugin="com.google.guava"/>
-      <import plugin="org.scala-lang.scalap"/>
-      <import plugin="com.google.protobuf"/>
+      <import plugin="org.scalaz.core"/>
    </requires>
 
    <plugin

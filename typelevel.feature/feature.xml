@@ -10,6 +10,7 @@
 
    <requires>
       <import plugin="org.eclipse.osgi"/>
+      <import plugin="org.slf4j.api"/>
    </requires>
 
    <plugin
@@ -94,26 +95,34 @@
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/> 
+         unpack="false"/>
 
    <plugin
          id="io.argonaut"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>    
+         unpack="false"/>
 
    <plugin
          id="org.elyast.fiddle.fdi.api"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>                       
+         unpack="false"/>
 
    <plugin
          id="com.typesafe.scalalogging"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>          
+         unpack="false"/>
+
+   <plugin
+         id="org.scalaz.xml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>

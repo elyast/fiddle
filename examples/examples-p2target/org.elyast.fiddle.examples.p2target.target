@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target includeMode="feature" name="remote" sequenceNumber="48">
+<?pde version="3.8"?><target includeMode="feature" name="remote" sequenceNumber="56">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<repository location="http://elyast.github.io/p2/"/>
+<unit id="org.elyast.fiddle.typelevel.feature.feature.group" version="0.0.1.201404140139"/>
+<unit id="org.elyast.fiddle.osgi.runtime.feature.feature.group" version="0.0.1.201404140139"/>
+<unit id="org.elyast.fiddle.http.feature.feature.group" version="0.0.1.201404140139"/>
+<unit id="org.elyast.fiddle.typelevel.test.feature.feature.group" version="0.0.1.201404140139"/>
+<unit id="org.elyast.fiddle.osgi.runtime.feature.source.feature.group" version="0.0.1.201404140139"/>
+<unit id="org.elyast.fiddle.typelevel.feature.source.feature.group" version="0.0.1.201404140139"/>
+<unit id="org.elyast.fiddle.typelevel.test.feature.source.feature.group" version="0.0.1.201404140139"/>
+<unit id="org.elyast.fiddle.http.feature.source.feature.group" version="0.0.1.201404140139"/>
+<repository location="https://dl.dropboxusercontent.com/u/16106115/p2/"/>
 </location>
-
 </locations>
 </target>
