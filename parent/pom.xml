@@ -57,9 +57,9 @@
 			<url>http://dl.bintray.com/scalaz/releases</url>
 		</repository>
 		<repository>
-			<id>elyast.github.io</id>
+			<id>elyast</id>
 			<name>Fiddle Repository</name>
-			<url>http://elyast.github.io/maven2/</url>
+			<url>https://dl.dropboxusercontent.com/u/16106115/maven2/</url>
 		</repository>
 	</repositories>
 

@@ -37,7 +37,7 @@
           <artifactId>maven-deploy-plugin</artifactId>
           <version>2.7</version>
           <configuration>
-              <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+              <altDeploymentRepository>dropbox.repo::default::file://${env.DROPBOX_PATH}/maven2</altDeploymentRepository>
           </configuration>
       </plugin>   
     </plugins>   
