@@ -1,11 +1,6 @@
 ---
-language: scala
-scala:
-- 2.10.3
+language: java
+install: mvn --version
+script: mvn clean install
 jdk:
 - openjdk7
-script: mvn clean install
-after_success: mvn deploy
-env:
-  global:
-    secure: "TyV3cPn7HL2mABKgvLDTlbF1/oSXZI5imXzS9gSpoJmURkorqfPTISOav1paRLwoVHFqVevmjD/CUWdB7oP/42SKg6IjOIs1xbzB25T2lMqYzJ9owq1IRdEX4XGaNkXcz6tU2z1Z7B2aAjKaP1bHouJ7EY3zVjFh7t5Q7cUp110="
