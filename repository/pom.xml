@@ -109,6 +109,7 @@
 							<append>true</append>
 							<mirrorMetadataOnly>false</mirrorMetadataOnly>
 							<compress>true</compress>
+                            <latestVersionOnly>true</latestVersionOnly>
 						</configuration>
 					</plugin>
 					<plugin>
