@@ -10,4 +10,12 @@
 	<artifactId>org.elyast.fiddle.fdi.api.tests</artifactId>
 	<packaging>eclipse-test-plugin</packaging>
 	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>scala-maven-plugin</artifactId>
+			</plugin>
+		</plugins>	
+	</build>
 </project>
