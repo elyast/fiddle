@@ -5,5 +5,7 @@ Bundle-SymbolicName: org.elyast.fiddle.examples.tests
 Bundle-Version: 0.0.1.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.scala-lang.scala-library
+Require-Bundle: org.scala-lang.scala-library,
+ org.specs2;bundle-version="2.3.10",
+ com.thoughtworks.paranamer;bundle-version="2.6.0"
 Service-Component: OSGI-INF/*.xml

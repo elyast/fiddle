@@ -86,6 +86,13 @@
          unpack="false"/>
 
    <plugin
+         id="org.jsoup.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>                  
+
+   <plugin
          id="org.elyast.fiddle.http.service.source"
          download-size="0"
          install-size="0"

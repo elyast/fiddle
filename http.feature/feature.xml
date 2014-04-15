@@ -25,6 +25,9 @@
       <import plugin="org.scala-lang.scalap"/>
       <import plugin="com.google.protobuf"/>
       <import plugin="javax.servlet"/>
+      <import plugin="javax.xml.bind"/>
+      <import plugin="joda-time"/>
+      <import plugin="org.joda.convert"/>
       <import plugin="org.slf4j.jcl"/>
       <import plugin="org.slf4j.log4j"/>
       <import plugin="org.scalaz.core"/>
@@ -85,6 +88,13 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
+   <plugin
+         id="org.jsoup"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>         
 
    <plugin
          id="org.elyast.fiddle.http.service"
