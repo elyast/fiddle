@@ -18,14 +18,22 @@
         
         <module>fdi.api</module>
         <module>fdi.api.tests</module>
+        <module>scalaz.feature</module>
+        <module>scalaz.feature.source</module>
+        <module>shapeless.feature</module>
+        <module>shapeless.feature.source</module>
+        <module>spire.feature</module>
+        <module>spire.feature.source</module>                        
 		<module>typelevel.feature</module>
         <module>typelevel.feature.source</module>
         <module>typelevel.test.feature</module>
         <module>typelevel.test.feature.source</module> 
 
         <module>http.service</module>
-        <module>http.feature</module>
-        <module>http.feature.source</module>
+        <module>unfiltered.feature</module>
+        <module>unfiltered.feature.source</module>
+        <module>dispatch.feature</module>
+        <module>dispatch.feature.source</module>        
         
         <module>repository</module>
 		

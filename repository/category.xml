@@ -6,21 +6,50 @@
    <feature url="features/org.elyast.fiddle.typelevel.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.typelevel.feature" version="0.0.1.qualifier">
       <category name="modules"/>
    </feature>
-   <feature url="features/org.elyast.fiddle.http.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.http.feature" version="0.0.1.qualifier">
+
+   <feature url="features/org.elyast.fiddle.scalaz.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.scalaz.feature" version="0.0.1.qualifier">
       <category name="modules"/>
    </feature>
+   <feature url="features/org.elyast.fiddle.shapeless.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.shapeless.feature" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>
+   <feature url="features/org.elyast.fiddle.spire.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.spire.feature" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>         
+   <feature url="features/org.elyast.fiddle.unfiltered.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.unfiltered.feature" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>
+   <feature url="features/org.elyast.fiddle.dispatch.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.dispatch.feature" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>   
    <feature url="features/org.elyast.fiddle.typelevel.test.feature_0.0.1.qualifier.jar" id="org.elyast.fiddle.typelevel.test.feature" version="0.0.1.qualifier">
       <category name="modules"/>
    </feature>
-   <feature url="features/org.elyast.fiddle.http.feature.source_0.0.1.qualifier.jar" id="org.elyast.fiddle.http.feature.source" version="0.0.1.qualifier">
+   <feature url="features/org.elyast.fiddle.unfiltered.feature.source_0.0.1.qualifier.jar" id="org.elyast.fiddle.unfiltered.feature.source" version="0.0.1.qualifier">
       <category name="modules"/>
    </feature>
+   <feature url="features/org.elyast.fiddle.dispatch.feature.source_0.0.1.qualifier.jar" id="org.elyast.fiddle.dispatch.feature.source" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>   
    <feature url="features/org.elyast.fiddle.osgi.runtime.feature.source_0.0.1.qualifier.jar" id="org.elyast.fiddle.osgi.runtime.feature.source" version="0.0.1.qualifier">
       <category name="modules"/>
    </feature>
    <feature url="features/org.elyast.fiddle.typelevel.feature.source_0.0.1.qualifier.jar" id="org.elyast.fiddle.typelevel.feature.source" version="0.0.1.qualifier">
       <category name="modules"/>
    </feature>
+
+   <feature url="features/org.elyast.fiddle.scalaz.feature.source_0.0.1.qualifier.jar" id="org.elyast.fiddle.scalaz.feature.source" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>
+
+   <feature url="features/org.elyast.fiddle.shapeless.feature.source_0.0.1.qualifier.jar" id="org.elyast.fiddle.shapeless.feature.source" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>   
+
+   <feature url="features/org.elyast.fiddle.spire.feature.source_0.0.1.qualifier.jar" id="org.elyast.fiddle.spire.feature.source" version="0.0.1.qualifier">
+      <category name="modules"/>
+   </feature>   
+
    <feature url="features/org.elyast.fiddle.typelevel.test.feature.source_0.0.1.qualifier.jar" id="org.elyast.fiddle.typelevel.test.feature.source" version="0.0.1.qualifier">
       <category name="modules"/>
    </feature>

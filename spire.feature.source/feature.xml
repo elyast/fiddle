@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.elyast.fiddle.spire.feature.source"
+      label="Spire libraries sources"
+      version="0.0.1.qualifier">
+
+   <description>
+      Scala type level runtime sources
+   </description>
+
+   <plugin
+         id="org.spire-math.spire.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

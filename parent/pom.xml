@@ -17,14 +17,14 @@
 
 	<properties>
 		<tycho.version>0.20.0</tycho.version>
-		<scala.version>2.10.3</scala.version>
+		<scala.version>2.10.4</scala.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<scalaz.version>7.0.6</scalaz.version>
 		<dispatch.version>0.11.0</dispatch.version>
 		<unfiltered.version>0.7.1</unfiltered.version>
 		<json4s.version>3.2.8</json4s.version>
 		<asm.version>4.1</asm.version>
-		<specs2.version>2.3.10</specs2.version>
+		<specs2.version>2.3.11</specs2.version>
 		<scalacheck.version>1.11.3</scalacheck.version>
 		<discipline.version>0.1</discipline.version>
 		<spire.version>0.7.3</spire.version>
@@ -168,24 +168,24 @@
 		<dependency>
 			<groupId>org.scalaz.stream</groupId>
 			<artifactId>scalaz-stream_2.10</artifactId>
-			<version>0.3.1</version>
+			<version>0.4.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.elyast.bundles</groupId>
 			<artifactId>org.scalaz.stream_2.10.source</artifactId>
-			<version>0.3.1</version>
+			<version>0.4.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.chuusai</groupId>
-			<artifactId>shapeless_2.10.3</artifactId>
-			<version>2.0.0-M1</version>
+			<artifactId>shapeless_2.10.4</artifactId>
+			<version>2.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.elyast.bundles</groupId>
-			<artifactId>com.chuusai.shapeless.core_2.10.3.source</artifactId>
-			<version>2.0.0.M1</version>
+			<artifactId>com.chuusai.shapeless.core_2.10.4.source</artifactId>
+			<version>2.0.0</version>
 		</dependency>
-		<dependency>
+		<!--dependency>
 			<groupId>org.elyast.bundles</groupId>
 			<artifactId>org.scala-lang.scalap</artifactId>
 			<version>${scala.version}</version>
@@ -204,7 +204,7 @@
 			<groupId>org.elyast.bundles</groupId>
 			<artifactId>org.scala-lang.scala-compiler.source</artifactId>
 			<version>${scala.version}</version>
-		</dependency>
+		</dependency-->
 		<!-- http -->
 		<dependency>
 			<groupId>org.elyast.bundles</groupId>
@@ -358,13 +358,13 @@
 		</dependency>
 		<dependency>
 			<groupId>org.elyast.bundles</groupId>
-			<artifactId>org.scalamacros.quasiquotes_2.10.3</artifactId>
-			<version>2.0.0.M3</version>
+			<artifactId>org.scalamacros.quasiquotes_2.10</artifactId>
+			<version>2.0.0.M7</version>
 		</dependency>
 		<dependency>
 			<groupId>org.elyast.bundles</groupId>
-			<artifactId>org.scalamacros.quasiquotes_2.10.3.source</artifactId>
-			<version>2.0.0.M3</version>
+			<artifactId>org.scalamacros.quasiquotes_2.10.source</artifactId>
+			<version>2.0.0.M7</version>
 		</dependency>
 		<dependency>
 			<groupId>org.elyast.bundles</groupId>
@@ -450,7 +450,16 @@
             <artifactId>org.joda.convert.source</artifactId>
             <version>1.6</version>
         </dependency>               
-
+        <dependency>
+            <groupId>org.typelevel</groupId>
+            <artifactId>scodec-bits_2.10</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elyast.bundles</groupId>
+            <artifactId>org.typelevel.scodec.bits_2.10.source</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 	</dependencies>
 	<build>
 		<plugins>

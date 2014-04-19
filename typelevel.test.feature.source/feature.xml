@@ -8,10 +8,6 @@
       Scala typelevel test runtime
    </description>
 
-   <requires>
-      <import plugin="org.eclipse.osgi"/>
-   </requires>
-
    <plugin
          id="org.specs2.source"
          download-size="0"
@@ -109,13 +105,6 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
-   <!--plugin
-         id="org.hamcrest.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/-->
 
    <plugin
          id="org.objenesis.source"

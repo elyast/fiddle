@@ -20,7 +20,7 @@
 
 	<profiles>
 		<profile>
-			<id>dropbox-empty</id>
+			<id>initial</id>
 			<activation>
 				<activeByDefault>false</activeByDefault>
 			</activation>

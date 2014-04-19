@@ -42,8 +42,8 @@
 
    <features>
       <feature id="org.elyast.fiddle.osgi.runtime.feature" version="0.0.1.qualifier"/>
-      <feature id="org.elyast.fiddle.typelevel.feature" version="0.0.1.qualifier"/>
-      <feature id="org.elyast.fiddle.http.feature" version="0.0.1.qualifier"/>
+      <feature id="org.elyast.fiddle.scalaz.feature" version="0.0.1.qualifier"/>
+      <feature id="org.elyast.fiddle.unfiltered.feature" version="0.0.1.qualifier"/>
    </features>
 
    <configurations>

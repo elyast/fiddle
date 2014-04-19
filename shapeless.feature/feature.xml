@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.elyast.fiddle.shapeless.feature"
+      label="Shapeless libraries"
+      version="0.0.1.qualifier">
+
+   <description>
+      Scala typelevel runtime
+   </description>
+
+   <requires>
+      <import plugin="org.scala-lang.scala-library"/>
+      <import plugin="org.scala-lang.scala-reflect"/>
+   </requires>
+
+   <plugin
+         id="com.chuusai.shapeless.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

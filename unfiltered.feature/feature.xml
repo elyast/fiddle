@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.elyast.fiddle.http.feature"
-      label="HTTP Feature"
+      id="org.elyast.fiddle.unfiltered.feature"
+      label="Unfiltered Feature"
       version="0.0.1.qualifier">
 
    <description url="http://www.example.com/description">
@@ -18,55 +18,17 @@
 
    <requires>
       <import plugin="org.eclipse.osgi"/>
-      <import plugin="org.slf4j.api"/>
-      <import plugin="com.google.guava"/>
       <import plugin="org.scala-lang.scala-library"/>
-      <import plugin="javax.inject"/>
-      <import plugin="org.scala-lang.scalap"/>
-      <import plugin="com.google.protobuf"/>
-      <import plugin="javax.servlet"/>
-      <import plugin="javax.xml.bind"/>
-      <import plugin="joda-time"/>
-      <import plugin="org.joda.convert"/>
-      <import plugin="org.slf4j.jcl"/>
-      <import plugin="org.slf4j.log4j"/>
+      <import plugin="org.slf4j.api"/>
       <import plugin="org.scalaz.core"/>
+      <import plugin="com.typesafe.scalalogging"/>
+      <import plugin="org.slf4j.log4j"/>
+      <import plugin="org.slf4j.jcl"/>
+      <import plugin="javax.servlet"/>
+      <import plugin="com.google.protobuf"/>
+      <import plugin="joda-time"/>
+      <import plugin="javax.inject"/>
    </requires>
-
-   <plugin
-         id="org.apache.commons.codec"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.commons.io"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="com.ning.async-http-client"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="net.databinder.dispatch"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="com.thoughtworks.paranamer"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
 
    <plugin
          id="net.databinder.unfiltered"
@@ -76,7 +38,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.json4s"
+         id="org.apache.commons.codec"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -90,11 +52,18 @@
          unpack="false"/>
 
    <plugin
-         id="org.jsoup"
+         id="org.json4s"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>         
+         unpack="false"/>
+
+   <plugin
+         id="com.thoughtworks.paranamer"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
    <plugin
          id="org.elyast.fiddle.http.service"
