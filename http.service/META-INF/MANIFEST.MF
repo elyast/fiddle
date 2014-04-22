@@ -9,6 +9,7 @@ Require-Bundle: org.scala-lang.scala-library
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Service-Component: OSGI-INF/*.xml
 Import-Package: com.typesafe.scalalogging.slf4j;version="1.1.0",
+ org.elyast.fiddle.fdi.api,
  org.jboss.netty.channel;version="3.6.8.Final",
  org.json4s;version="3.2.8",
  org.osgi.framework;version="1.3.0",

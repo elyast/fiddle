@@ -1,11 +1,14 @@
 package org.elyast.fiddle.http.service.internal
 
 import com.typesafe.scalalogging.slf4j.Logging
-import SysEnv._
 import unfiltered.request._
 import unfiltered.response._
 import unfiltered.netty._
 import java.net.URL
+import org.elyast.fiddle.fdi.api.Environment
+import scalaz.syntax.validation._
+import scalaz._
+import scalaz.std._
 
 object Temperature extends async.Plan with ServerErrorResponse {
   def intent = {
@@ -14,22 +17,35 @@ object Temperature extends async.Plan with ServerErrorResponse {
   }
 }
 
-class HttpService extends Logging {
+object Defaults {
+  val CHUNK_SIZE = 1048576
+  val PORT = 8080
+}
 
-  val port: Int = SysEnv.env[Int]("PORT").getOrElse(8080)
-  val chunkSize: Int = SysEnv.env[Int]("CHUNK_SIZE").getOrElse(1048576)
-  val staticResources: Option[URL] = SysEnv.env("STATIC_RESOURCES")
+case class HttpService extends Logging {
+  import Defaults._
+  implicit def parseInt: String => Validation[NumberFormatException, Int] = string.parseInt
+  implicit def parseURL(a: String) = Validation.fromTryCatch(new URL(a))
+
+  def extractSettings(env: Environment) = {
+    (env.get[NumberFormatException, Int]("PORT", PORT),
+      env.get[NumberFormatException, Int]("CHUNK_SIZE", CHUNK_SIZE),
+      env.get[Throwable, URL]("RESOURCES"))
+  }
   
-  def activate() {
-    logger.trace(s"HTTP service starting on port $port")
-    val baseServer = Http(port).chunked(chunkSize)
-    val httpServer = staticResources match {
-      case Some(res) => baseServer.resources(res)
-      case None => baseServer
-    }
-    
-    httpServer.plan(Temperature).start()
-    //.resources(staticResources)
-    logger.trace(s"Leaving acticate method")
+  def start(): Environment => Unit = {
+    env =>
+      val (port, chunkSize, resources) = extractSettings(env)
+      val baseServer = Http(port).chunked(chunkSize)
+      val httpServer = resources match {
+        case Some(res) => baseServer.resources(res)
+        case None => baseServer
+      }
+
+      httpServer.plan(Temperature).start()
+  }
+
+  def stop() = {
+
   }
 }
